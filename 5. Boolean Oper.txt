@@ -23,6 +23,19 @@ SELECT * FROM student
  SELECT * FROM student
  WHERE NOT course = 'civil';
 
+SELECT * FROM student
+WHERE name LIKE 'S%';
+SELECT * FROM student
+WHERE name LIKE '%S';
+SELECT * FROM student
+WHERE name LIKE '%h%';
+
+SELECT * FROM student
+WHERE name LIKE '_____';
+
+
+
+
 
  SELECT * FROM student
  WHERE course = 'IT' AND phone LIKE '123%';
