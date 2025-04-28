@@ -22,7 +22,6 @@ INSERT INTO student values(3, 'Ishwari', '9876543212', 'Computer Science', 88);
 
  SELECT COUNT(*)  FROM student;
 
-
  SELECT MAX(marks)  FROM student;
 
 
@@ -34,3 +33,7 @@ INSERT INTO student values(3, 'Ishwari', '9876543212', 'Computer Science', 88);
  SELECT SUM(marks) FROM student;
 
  SELECT name, (marks / 100.0) * 100 AS percentage FROM student;
+SELECT name, marks, marks - 5 AS updated_marks FROM student;
+SELECT name, marks, marks * 2 AS double_marks FROM student;
+
+
