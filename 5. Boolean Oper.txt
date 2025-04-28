@@ -1,0 +1,29 @@
+ create database bollean;
+
+
+ use bollean;
+
+CREATE TABLE student (
+       roll_no INT PRIMARY KEY,
+       name VARCHAR(50),
+       phone VARCHAR(15),
+       course VARCHAR(50)
+     );
+
+
+insert into student values(1,"sagar","123456", "IT");
+insert into student values(2,"snhea","789456", "cs");
+insert into student values(3,"ishwari","785556", "entc");
+insert into student values(4,"pinki","785441", "civil");
+
+
+SELECT * FROM student
+ WHERE name = 'Sagar' OR name = 'Sneha';
+
+ SELECT * FROM student
+ WHERE NOT course = 'civil';
+
+
+ SELECT * FROM student
+ WHERE course = 'IT' AND phone LIKE '123%';
+

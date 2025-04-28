@@ -1,0 +1,29 @@
+
+ create database rel;
+
+ use rel;
+
+ CREATE TABLE student (
+ roll_no INT PRIMARY KEY,
+ name VARCHAR(50),
+ phone VARCHAR(15),
+ course_id INT
+ );
+
+
+INSERT INTO student VALUES (1, 'Sagar', '9876543210', 1);
+INSERT INTO student VALUES (2, 'Sneha', '9876543211', 2);
+INSERT INTO student VALUES (3, 'Ishwari', '9876543212', 1);
+INSERT INTO student VALUES (4, 'Pratik', '9876543213', 3);
+  
+
+
+SELECT * FROM student;
+
+SELECT * FROM student WHERE name = 'Sagar';
+
+SELECT * FROM student WHERE name <> 'Sneha';
+
+SELECT * FROM student WHERE roll_no > 2;
+
+ SELECT * FROM student WHERE roll_no BETWEEN 1 AND 3;

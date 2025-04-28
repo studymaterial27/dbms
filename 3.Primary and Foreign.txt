@@ -1,0 +1,29 @@
+create database pri; 
+ 
+use pri; 
+CREATE TABLE Department ( 
+  DeptID INT PRIMARY KEY, 
+DeptName VARCHAR(50) 
+); 
+ 
+CREATE TABLE Student ( 
+       StudentID INT PRIMARY KEY, 
+       Name VARCHAR(100), 
+       DeptID INT, 
+       FOREIGN KEY (DeptID) REFERENCES Department(DeptID) 
+    ); 
+ 
+ALTER TABLE Student 
+    ADD Email VARCHAR(100); 
+ 
+ ALTER TABLE Student 
+   MODIFY Name VARCHAR(150); 
+ 
+ select * from student; 
+ 
+select * from Department; 
+ 
+ DROP TABLE Student; 
+select * from student; 
+ DROP TABLE Department;
+select * from Department; 

@@ -1,0 +1,28 @@
+create database setoper;
+
+
+use setoper;
+
+ create table A_div(
+    s_id int,
+    s_name varchar(200)
+   );
+
+ create table B_div(
+     s_id int,
+     s_name varchar(200)
+    );
+
+insert into A_div values(1,"sagar");
+insert into A_div values(2,"sneha");
+insert into A_div values(3,"ishwari");
+
+insert into B_div values(2,"sneha");
+insert into B_div values(3,"ishwari");
+insert into B_div values(4,"pinki");
+
+select s_name from B_div union select s_name from A_div;
+
+select s_name from B_div intersect select s_name from A_div;
+
+select s_name from B_div union all select s_name from A_div;

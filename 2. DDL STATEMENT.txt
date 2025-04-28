@@ -1,0 +1,32 @@
+create database ddl;
+
+use ddl;
+
+CREATE TABLE student (
+    roll_no INT PRIMARY KEY,
+    name VARCHAR(30),
+    course VARCHAR(30),
+    phone VARCHAR(15)
+);
+
+INSERT INTO student VALUES (1, 'Sagar', 'ENG', '9876543210');
+INSERT INTO student VALUES (2, 'Sneha', 'ENG', '9876543211');
+INSERT INTO student VALUES (3, 'Ishwari', 'ENG', '9876543212');
+INSERT INTO student VALUES (4, 'Pratik', 'ENG', '9876543213');
+
+CREATE TABLE course (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(30)
+);
+
+INSERT INTO course VALUES (1, 'ENG');
+INSERT INTO course VALUES (2, 'ENG');
+
+ALTER TABLE student DROP COLUMN course;
+ALTER TABLE student ADD course_id INT;
+ALTER TABLE student ADD  FOREIGN KEY (course_id) REFERENCES course(course_id);
+
+UPDATE student SET course_id = 1 WHERE roll_no IN (1,2,4);
+UPDATE student SET course_id = 2 WHERE roll_no = 3;
+select * from student;
+select * from course;

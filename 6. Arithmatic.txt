@@ -1,0 +1,36 @@
+ create database arith;
+
+ use arith;
+
+ CREATE TABLE student (
+        roll_no INT PRIMARY KEY,
+        name VARCHAR(50),
+        phone VARCHAR(15),
+        course VARCHAR(50),
+        marks INT
+     );
+
+ INSERT INTO student values(1, 'Sagar', '9876543210', 'Computer Science', 85);
+
+ INSERT INTO student values(2, 'Sneha', '9876543211', 'Information Technology', 90);
+
+INSERT INTO student values(3, 'Ishwari', '9876543212', 'Computer Science', 88);
+
+
+ INSERT INTO student values(4, 'Pratik', '9876543213', 'Mechanical', 78);
+
+
+ SELECT COUNT(*)  FROM student;
+
+
+ SELECT MAX(marks)  FROM student;
+
+
+ SELECT MIN(marks)  FROM student;
+
+
+ SELECT AVG(marks)  FROM student;
+
+ SELECT SUM(marks) FROM student;
+
+ SELECT name, (marks / 100.0) * 100 AS percentage FROM student;
